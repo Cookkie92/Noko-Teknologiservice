@@ -111,25 +111,22 @@ body {
   gap: 0.75rem;
 }
 
-/* Icon */
 .logo-icon-link {
   display: inline-flex;
-  width: 32px;
-  height: 32px;
 }
 
 .logo-icon {
-  width: 100%;
-  height: 100%;
+  display: block;
+  width: 40px;
+  height: 40px;
   object-fit: contain;
+  border-radius: 50%;
   transition: transform 0.4s ease;
-  border-radius: 20px;
 }
 
-/* Hover spin */
 .logo-icon:hover {
   transform: rotate(360deg) scale(1.05);
-  filter: drop-shadow(0 0 6px rgba(147, 51, 234, 0.6));
+  filter: drop-shadow(0 0 4px rgba(147, 51, 234, 0.45));
 }
 
 .logo-text {
@@ -139,7 +136,8 @@ body {
 
 .logo-title {
   font-size: 0.95rem;
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: 0.5px;
 }
 
 .logo-subtitle {
@@ -228,6 +226,22 @@ body {
 
 .hero {
   padding: 4.5rem 0 4rem;
+  padding-bottom: 120px;
+}
+
+.hero-content {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .hero-inner {
@@ -240,12 +254,16 @@ body {
 .hero-content h1 {
   font-size: clamp(2.4rem, 4vw, 3.1rem);
   margin: 0 0 1rem;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+  text-shadow: 0 0 20px rgba(255,255,255,0.05);
 }
 
 .hero-content p {
   margin: 0 0 1.5rem;
-  color: var(--muted);
+  color: rgba(255,255,255,0.75);
   max-width: 34rem;
+  margin-bottom: 28px;
 }
 
 .hero-actions {
@@ -279,10 +297,11 @@ body {
 }
 
 .hero-panel-card {
-  background: radial-gradient(circle at top left, #0b1120, #020617);
+   backdrop-filter: blur(10px);
+  background: rgba(10, 15, 35, 0.55);
   border-radius: var(--radius-xl);
   padding: 1.3rem 1.4rem;
-  border: 1px solid rgba(148, 163, 184, 0.4);
+  border: 1px solid rgba(255,255,255,0.08);
   box-shadow: var(--shadow-soft);
 }
 
@@ -317,6 +336,7 @@ body {
   box-shadow: 0 16px 32px rgba(15, 23, 42, 0.75);
   padding: 1.5rem 1.5rem 1.6rem;
 }
+
 
 .service-grid {
   display: grid;
@@ -519,12 +539,12 @@ body {
 .btn-primary {
   background: linear-gradient(to right, #38bdf8, #22c55e);
   color: #020617;
-  box-shadow: 0 18px 35px rgba(8, 47, 73, 0.75);
+  box-shadow: 0 0 12px rgba(34,197,94,0.4);
 }
 
 .btn-primary:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 24px 45px rgba(8, 47, 73, 0.9);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(34,197,94,0.4);
 }
 
 .btn-secondary {
@@ -535,7 +555,7 @@ body {
 }
 
 .btn-secondary:hover {
-  border-color: var(--accent);
+  border-color: rgba(255,255,255,0.4);
 }
 
 .btn-full {
@@ -647,4 +667,9 @@ body {
   border-radius: 8px;
   margin-bottom: 16px;
   font-size: 14px;
+}
+
+.hero {
+  background:  linear-gradient(rgba(10,15,35,0.92), rgba(10,15,35,0.97)),
+    url("/images/banner2.jfif") center/cover no-repeat;
 }
