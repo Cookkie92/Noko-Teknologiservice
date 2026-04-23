@@ -671,5 +671,5 @@ body {
 
 .hero {
   background:  linear-gradient(rgba(10,15,35,0.92), rgba(10,15,35,0.97)),
-    url("/images/banner2.jfif") center/cover no-repeat;
+    url("/images/banner2.jpg") center/cover no-repeat;
 }
